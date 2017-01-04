@@ -49,7 +49,7 @@ fi
 if [ "$platform" = "linux" ]; then
 	md5cmd=md5sum
 else
-	md5cmd=md5 -r
+	md5cmd="md5 -r"
 fi
 
 checksum=$($md5cmd dgraph | awk '{print $1}')
